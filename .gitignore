@@ -1,0 +1,88 @@
+# emacs
+*~
+.\#*
+
+# Pycharm
+.idea/
+
+# Python
+__pycache__
+*.pyc
+venv
+.venv
+virtualenv
+.virtualenv
+.cache
+*.egg-info
+.coverage
+
+# Coverage
+htmlcov
+
+# pytest
+.pytest_cache
+
+# example output files
+examples/output
+
+# Docs
+doc/_build
+doc/api
+
+#VS Code
+.vscode
+
+# Build
+dist
+
+# Dependency directories
+/node_modules
+/bower_components
+
+# Distribution directories
+/dist
+/build
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+__pycache__/
+final/
+env/
+
+# Compiled binary files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Miscellaneous
+*.swp
+*~

@@ -1,0 +1,80 @@
+.rendered-example {
+  border: 1px solid #e1e4e5;
+  padding: 12px;
+  background-color: #fff;
+  margin: 1px 0 24px;
+}
+
+.subtitle-slogan {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 125%;
+  text-align: right;
+}
+
+/*
+ * Tweak theme color in navbar header
+ */
+.wy-side-nav-search,
+.wy-nav-top {
+  background: #118DA1;
+}
+
+/*
+ * Make sidebar section headers slightly brighter than the header for readability
+ */
+p.caption>span {
+  color: #38B7CB;
+}
+
+/*
+ * Sitewide announcement banner
+ */
+.sitewide-announcement {
+  width: 100%;
+  text-align: center;
+
+  background-color: #8FC93A;
+  color: rgb(45, 42, 42);
+  /* 300px on left padding aligns with navbar width */
+  padding: 0.4em 10% 0.4em calc(300px + 1em);
+}
+
+/* This matches the RTD theme's breakpoint when the navbar collapses */
+@media screen and (max-width: 768px) {
+  .sitewide-announcement {
+    padding: 0.4em 0;
+  }
+}
+
+.sitewide-announcement a:link {
+  color: #005dc0;
+  font-weight: bold;
+}
+
+.sitewide-announcement a:visited {
+  color: #005dc0;
+  font-weight: bold;
+}
+
+.sitewide-announcement a:hover {
+  color: #005dc0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sitewide-announcement a:active {
+  color: #005dc0;
+  font-weight: bold;
+}
+
+.sitewide-announcement>.close-button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: italic;
+}
+
+.sitewide-announcement>.close-button:hover {
+  text-decoration: underline;
+}
