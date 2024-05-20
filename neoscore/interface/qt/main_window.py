@@ -21,6 +21,32 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_func = None
         self.mouse_event_handler = None
         self._frame = 0  # Frame counter used in debug mode
+        
+        self.actionNew.triggered.connect(self.newFile)
+        self.actionOpen.triggered.connect(self.openFile)
+        self.actionSave.triggered.connect(self.saveFile)
+        self.actionSave_as.triggered.connect(self.saveAsFile)
+        self.actionCopy.triggered.connect(self.copyFile)
+        self.actionPaste.triggered.connect(self.pasteFile)
+        
+    
+    def newFile(self):
+        print("New file clicked")
+        
+    def openFile(self):
+        print("Open file clicked")
+        
+    def saveFile(self):
+        print("Save file clicked")
+        
+    def saveAsFile(self):
+        print("Save as file clicked")
+        
+    def copyFile(self):
+        print("Copy file clicked")
+        
+    def pasteFile(self):
+        print("Paste file clicked")
 
     def show(
         self,
