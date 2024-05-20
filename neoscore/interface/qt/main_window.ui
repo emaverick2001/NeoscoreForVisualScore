@@ -66,6 +66,9 @@
       <height>541</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(222, 218, 242);</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
