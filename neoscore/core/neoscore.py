@@ -43,7 +43,8 @@ registered_music_fonts: Dict[str, dict] = {}
 registered_font_family_names: Set[str] = set()
 """A set of family names of all registered fonts, including music fonts"""
 
-background_brush = Brush("#ffffff")
+# TODO this controls the background color of the scene
+background_brush = Brush("#CC99FF")
 """The brush used to draw the scene background.
 
 Defaults to solid white. Set this using :obj:`.set_background_brush`.
@@ -275,8 +276,9 @@ def show(
     global background_brush
     global _display_page_geometry_in_refresh_func
     _display_page_geometry_in_refresh_func = display_page_geometry
+    doc_background_brush = Brush("#FFFFFF")
 
-    _render_document(display_page_geometry, background_brush)
+    _render_document(display_page_geometry, doc_background_brush)
     if refresh_func:
         set_refresh_func(refresh_func)
     app_interface.auto_viewport_interaction_enabled = auto_viewport_interaction_enabled
