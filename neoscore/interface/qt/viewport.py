@@ -51,7 +51,7 @@ class Viewport(QtWidgets.QGraphicsView):
         """Implementation of Qt event hook for zooming with the mouse wheel."""
         if not self.auto_interaction_enabled:
             return
-        zoom_in_factor = 1.25
+        zoom_in_factor = 0.9
         zoom_out_factor = 1 / zoom_in_factor
         wheel_delta = event.angleDelta().y()
         # Save the scene pos
