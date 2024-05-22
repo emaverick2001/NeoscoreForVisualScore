@@ -67,7 +67,16 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(222, 218, 242);</string>
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(158, 82, 255, 255), stop:1 rgba(255, 255, 255, 255))</string>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>211</red>
+       <green>157</green>
+       <blue>230</blue>
+      </color>
+     </brush>
     </property>
     <property name="dragMode">
      <enum>QGraphicsView::ScrollHandDrag</enum>
