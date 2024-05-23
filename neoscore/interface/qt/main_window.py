@@ -3,6 +3,13 @@ from time import time
 from typing import Optional, Tuple
 
 from PyQt5 import QtCore, QtWidgets, uic
+from PyQt5 import QtCore, QtWidgets, uic
+
+# cannot import setup/show again here, circular import
+# from neoscore.core.neoscore import setup, show
+from neoscore.core.text import Text
+from neoscore.core.point import ORIGIN
+from neoscore.common import *
 
 QT_PRECISE_TIMER = 0
 
@@ -28,6 +35,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actionSave_as.triggered.connect(self.saveAsFile)
         self.actionCopy.triggered.connect(self.copyFile)
         self.actionPaste.triggered.connect(self.pasteFile)
+
+        self.addPageButton.clicked.connect(self.addPage)
         
     
     def newFile(self):
@@ -47,6 +56,19 @@ class MainWindow(QtWidgets.QMainWindow):
         
     def pasteFile(self):
         print("Paste file clicked")
+
+    def addPage(self):
+        new_page_index = len(neoscore.document.pages)
+        print(new_page_index)
+        neoscore.document.pages[new_page_index]
+        Text(ORIGIN, neoscore.document.pages[new_page_index - 1], f"This is page {new_page_index}")
+        # render the document again to show the new page
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+    
+        # Update the view to show the new page
+        self.graphicsView.viewport().update()
+        
 
     def show(
         self,
