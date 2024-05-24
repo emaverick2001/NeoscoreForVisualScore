@@ -48,6 +48,34 @@ class MainWindow(QtWidgets.QMainWindow):
     def pasteFile(self):
         print("Paste file clicked")
 
+    def addPage(self):
+        new_page_index = len(neoscore.document.pages)
+        print(new_page_index)
+        neoscore.document.pages[new_page_index]
+        Text(ORIGIN, neoscore.document.pages[new_page_index - 1], f"This is page {new_page_index}")
+        # render the document again to show the new page
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+    
+        # Update the view to show the new page
+        self.graphicsView.viewport().update()
+    
+    #TODO make a remove page function
+    
+    def removePage(self):
+        if len(neoscore.document.pages) > 0:
+            # Remove the last page
+            neoscore.document.pages.pop()
+
+            # render the document again to reflect the removed page
+            neoscore.app_interface.clear_scene() 
+            neoscore.document.render(True, Brush("#FFFFFF"))
+        
+            # Update the view to reflect the removed page
+            self.graphicsView.viewport().update()
+        else:
+            print("No pages to remove.")
+
     def show(
         self,
         min_size: Optional[Tuple[int, int]] = None,
