@@ -8,6 +8,8 @@ from neoscore.core.brush_pattern import BrushPattern
 from neoscore.core.color import Color, ColorDef
 from neoscore.interface.brush_interface import BrushInterface
 
+from PyQt5 import QtGui
+
 
 class Brush:
 
@@ -89,7 +91,16 @@ class Brush:
             and self.color == other.color
             and self.pattern == other.pattern
         )
+        
+    def set_gradient(self,color_start: str, color_end: str):
+        """Set a gradient for the brush."""
+        gradient = QtGui.QLinearGradient(0, 0, 1, 1)
+        gradient.setColorAt(0, QtGui.QColor(color_start))
+        gradient.setColorAt(1, QtGui.QColor(color_end))
+        return gradient
 
+    def __str__(self) -> str:
+        return f"Brush(color={self.color}, pattern={self.pattern})"
 
 BrushDef: TypeAlias = Union[Brush, str]
 """A ``Brush`` or a color hex string to be passed to an otherwise default ``Brush``."""

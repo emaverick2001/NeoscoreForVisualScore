@@ -58,3 +58,6 @@ class BrushPattern(Enum):
 
     CROSSING_DIAGONAL_LINES = 14
     """Crossing diagonal lines."""
+    
+    LINEAR_GRADIENT = 15
+    """Linear gradient pattern."""

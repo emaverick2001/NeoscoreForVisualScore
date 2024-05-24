@@ -23,6 +23,7 @@ from neoscore.core.propagating_thread import PropagatingThread
 from neoscore.core.rect import RectDef
 from neoscore.core.units import Unit
 from neoscore.interface.app_interface import AppInterface
+from neoscore.core.brush_pattern import BrushPattern
 
 if TYPE_CHECKING:
     from neoscore.core.document import Document
@@ -44,7 +45,7 @@ registered_font_family_names: Set[str] = set()
 """A set of family names of all registered fonts, including music fonts"""
 
 # TODO this controls the background color of the scene
-background_brush = Brush("#E6E6FA")
+background_brush = Brush("#B19CD9",BrushPattern.LINEAR_GRADIENT)
 """The brush used to draw the scene background.
 
 Defaults to solid white. Set this using :obj:`.set_background_brush`.
