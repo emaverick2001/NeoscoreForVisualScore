@@ -72,6 +72,11 @@ class PageSupplier:
 
     def __len__(self):
         return len(self._page_list)
+    
+    def pop(self, index):
+        if index < 0 or index >= len(self._page_list):
+            raise IndexError("Index out of range.")
+        return self._page_list.pop(index)
 
     @property
     def document(self) -> Document:
