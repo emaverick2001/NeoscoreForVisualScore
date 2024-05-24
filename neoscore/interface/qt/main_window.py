@@ -68,7 +68,22 @@ class MainWindow(QtWidgets.QMainWindow):
     
         # Update the view to show the new page
         self.graphicsView.viewport().update()
+    
+    #TODO make a remove page function
+    
+    def removePage(self):
+        if len(neoscore.document.pages) > 0:
+            # Remove the last page
+            neoscore.document.pages.pop()
+
+            # render the document again to reflect the removed page
+            neoscore.app_interface.clear_scene() 
+            neoscore.document.render(True, Brush("#FFFFFF"))
         
+            # Update the view to reflect the removed page
+            self.graphicsView.viewport().update()
+        else:
+            print("No pages to remove.")
 
     def show(
         self,
