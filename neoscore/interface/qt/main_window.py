@@ -33,10 +33,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actionOpen.triggered.connect(self.openFile)
         self.actionSave.triggered.connect(self.saveFile)
         self.actionSave_as.triggered.connect(self.saveAsFile)
+        self.actionCut.triggered.connect(self.cutFile)
         self.actionCopy.triggered.connect(self.copyFile)
         self.actionPaste.triggered.connect(self.pasteFile)
 
         self.addPageButton.clicked.connect(self.addPage)
+        self.delPageButton.clicked.connect(self.removePage)
         
     
     def newFile(self):
@@ -51,6 +53,9 @@ class MainWindow(QtWidgets.QMainWindow):
     def saveAsFile(self):
         print("Save as file clicked")
         
+    def cutFile(self):
+        print("Cut file clicked")
+        
     def copyFile(self):
         print("Copy file clicked")
         
@@ -60,8 +65,11 @@ class MainWindow(QtWidgets.QMainWindow):
     def addPage(self):
         new_page_index = len(neoscore.document.pages)
         print(new_page_index)
+
+        Text(ORIGIN, neoscore.document.pages[new_page_index], f"This is page {new_page_index + 1}")
         neoscore.document.pages[new_page_index]
-        Text(ORIGIN, neoscore.document.pages[new_page_index - 1], f"This is page {new_page_index}")
+        
+
         # render the document again to show the new page
         neoscore.app_interface.clear_scene() 
         neoscore.document.render(True, Brush("#FFFFFF"))
@@ -69,12 +77,14 @@ class MainWindow(QtWidgets.QMainWindow):
         # Update the view to show the new page
         self.graphicsView.viewport().update()
     
-    #TODO make a remove page function
+    #TODO needs to remove deleted page from being rendered on graphicsView
     
     def removePage(self):
         if len(neoscore.document.pages) > 0:
             # Remove the last page
-            neoscore.document.pages.pop()
+            last_page_index = len(neoscore.document.pages) - 1
+            print(last_page_index)
+            neoscore.document.pages.pop(last_page_index)
 
             # render the document again to reflect the removed page
             neoscore.app_interface.clear_scene() 

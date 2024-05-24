@@ -44,7 +44,7 @@ registered_font_family_names: Set[str] = set()
 """A set of family names of all registered fonts, including music fonts"""
 
 # TODO this controls the background color of the scene
-background_brush = Brush("#CC99FF")
+background_brush = Brush("#E6E6FA")
 """The brush used to draw the scene background.
 
 Defaults to solid white. Set this using :obj:`.set_background_brush`.
