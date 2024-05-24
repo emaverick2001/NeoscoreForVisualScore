@@ -65,9 +65,11 @@ class MainWindow(QtWidgets.QMainWindow):
     def addPage(self):
         new_page_index = len(neoscore.document.pages)
         print(new_page_index)
+
         Text(ORIGIN, neoscore.document.pages[new_page_index], f"This is page {new_page_index + 1}")
         neoscore.document.pages[new_page_index]
         
+
         # render the document again to show the new page
         neoscore.app_interface.clear_scene() 
         neoscore.document.render(True, Brush("#FFFFFF"))
