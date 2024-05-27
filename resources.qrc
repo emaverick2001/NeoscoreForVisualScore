@@ -1,0 +1,14 @@
+<RCC>
+  <qresource>
+    <file>Icons/arrow-154-64.png</file>
+    <file>Icons/arrow-216-64.png</file>
+    <file>Icons/up-arrow.png</file>
+    <file>Icons/icons8-add-file-60.png</file>
+    <file>Icons/icons8-delete-file-60.png</file>
+    <file>Icons/logolight-1.png</file>
+    <file>Icons/menu.png</file>
+    <file>Icons/search.png</file>
+    <file>Icons/settingssmall1.png</file>
+    <file>Icons/whitemenu.png</file>
+  </qresource>
+</RCC>

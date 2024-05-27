@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>941</width>
-    <height>706</height>
+    <width>1231</width>
+    <height>867</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Visualscore</string>
@@ -20,51 +26,20 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="Viewport" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>64</width>
-      <height>32</height>
+      <x>330</x>
+      <y>80</y>
+      <width>901</width>
+      <height>751</height>
      </rect>
     </property>
     <property name="sizeIncrement">
      <size>
-      <width>1</width>
-      <height>10</height>
+      <width>0</width>
+      <height>0</height>
      </size>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>Menu</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>15</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="Viewport" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>10</y>
-      <width>791</width>
-      <height>651</height>
-     </rect>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -82,31 +57,520 @@
      <enum>QGraphicsView::ScrollHandDrag</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="addPageButton">
+   <widget class="QWidget" name="icon_only_widget" native="true">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>60</y>
-      <width>91</width>
-      <height>31</height>
+      <x>10</x>
+      <y>80</y>
+      <width>41</width>
+      <height>751</height>
      </rect>
     </property>
-    <property name="text">
-     <string>New Page</string>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+	background-color: rgb(63, 63, 63);
+}</string>
     </property>
+    <widget class="QPushButton" name="settingsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>710</y>
+       <width>41</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../resources.qrc">
+       <normaloff>:/Icons/settingssmall1.png</normaloff>:/Icons/settingssmall1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logo_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../../../resources.qrc">:/Icons/logolight-1.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="delPageButton">
+   <widget class="QWidget" name="icon_text_widget" native="true">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>100</y>
-      <width>91</width>
-      <height>31</height>
+      <x>60</x>
+      <y>80</y>
+      <width>261</width>
+      <height>751</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Del Page</string>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+	background-color: rgb(63, 63, 63);
+}</string>
     </property>
+    <widget class="QLabel" name="settingsText">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>716</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget{
+	color:white;
+}</string>
+     </property>
+     <property name="text">
+      <string>   Settings</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="settingsButton_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>710</y>
+       <width>41</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../resources.qrc">
+       <normaloff>:/Icons/settingssmall1.png</normaloff>:/Icons/settingssmall1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logo">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../../../resources.qrc">:/Icons/logolight-1.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>241</width>
+       <height>240</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="addPageButton">
+        <property name="styleSheet">
+         <string notr="true">QWidget{
+	background-color: rgb(63, 63, 63);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../../resources.qrc">
+          <normaloff>:/Icons/icons8-add-file-60.png</normaloff>:/Icons/icons8-add-file-60.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="delPageButton">
+        <property name="styleSheet">
+         <string notr="true">QWidget{
+	background-color: rgb(63, 63, 63);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../../../resources.qrc">
+          <normaloff>:/Icons/icons8-delete-file-60.png</normaloff>:/Icons/icons8-delete-file-60.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="Staff">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="1" column="0" colspan="2">
+          <widget class="QFrame" name="staff_dropdown">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="braceButton">
+              <property name="text">
+               <string>1</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="reverseBraceButton">
+              <property name="text">
+               <string>2</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="bracketButton">
+              <property name="text">
+               <string>3</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QPushButton" name="bracketTopButton">
+              <property name="text">
+               <string>4</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QPushButton" name="bracketBottomButton">
+              <property name="text">
+               <string>5</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="reversedBracketTopButton">
+              <property name="text">
+               <string>6</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="reversedBracketBottomButton">
+              <property name="text">
+               <string>7</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="systemDividerButton">
+              <property name="text">
+               <string>8</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QPushButton" name="systemDividerLongButton">
+              <property name="text">
+               <string>9</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QPushButton" name="systemDividerExtraLongButton">
+              <property name="text">
+               <string>10</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="splitBarDividerButton">
+              <property name="text">
+               <string>11</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="staffDividerArrowDownButton">
+              <property name="text">
+               <string>12</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="staffDividerArrowUpButton">
+              <property name="text">
+               <string>13</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QPushButton" name="staffDividerArrowUpDownButton">
+              <property name="text">
+               <string>14</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="dropdown1">
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>1</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	background-color: rgb(63, 63, 63);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../../../resources.qrc">
+             <normaloff>:/Icons/arrow-154-64.png</normaloff>
+             <normalon>:/Icons/arrow-216-64.png</normalon>:/Icons/arrow-154-64.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>10</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="dropdown1_text">
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	
+	background-color: rgb(63, 63, 63);
+	color:white;
+}</string>
+           </property>
+           <property name="text">
+            <string>     Staff brackets and dividers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>delPageButton</zorder>
+    <zorder>addPageButton</zorder>
+    <zorder>settingsText</zorder>
+    <zorder>settingsButton_2</zorder>
+    <zorder>Staff</zorder>
+    <zorder>logo</zorder>
+   </widget>
+   <widget class="QWidget" name="header_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+	
+	background-color: rgb(63, 63, 63);
+}</string>
+    </property>
+    <widget class="QPushButton" name="menuButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>41</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>1</width>
+       <height>10</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../resources.qrc">
+       <normaloff>:/Icons/whitemenu.png</normaloff>:/Icons/whitemenu.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -114,7 +578,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>941</width>
+     <width>1231</width>
      <height>21</height>
     </rect>
    </property>
@@ -247,21 +711,71 @@
    <header>neoscore.interface.qt.viewport</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../../../resources.qrc"/>
+ </resources>
  <connections>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>showFullScreen()</slot>
+   <sender>dropdown1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>staff_dropdown</receiver>
+   <slot>setHidden(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>319</y>
+     <x>87</x>
+     <y>251</y>
     </hint>
     <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
+     <x>79</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_text_widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_only_widget</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dropdown1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>staff_dropdown</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>124</x>
+     <y>303</y>
     </hint>
    </hints>
   </connection>
