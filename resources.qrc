@@ -1,5 +1,73 @@
 <RCC>
   <qresource>
+    <file>Icons/8th_note.png</file>
+    <file>Icons/8th_rest.png</file>
+    <file>Icons/8va.png</file>
+    <file>Icons/8vb.png</file>
+    <file>Icons/15ma.png</file>
+    <file>Icons/15mb.png</file>
+    <file>Icons/16th_note_dotted.png</file>
+    <file>Icons/16th_note.png</file>
+    <file>Icons/16th_rest.png</file>
+    <file>Icons/32nd_note_dotted.png</file>
+    <file>Icons/32nd_note.png</file>
+    <file>Icons/32nd_rest.png</file>
+    <file>Icons/64th_note.png</file>
+    <file>Icons/64th_rest.png</file>
+    <file>Icons/accent_heavy.png</file>
+    <file>Icons/accent_normal.png</file>
+    <file>Icons/addinstrument.gif</file>
+    <file>Icons/addpercussiontrack.gif</file>
+    <file>Icons/arpeggio_down.png</file>
+    <file>Icons/arpeggio_up.png</file>
+    <file>Icons/barline_repeatend.png</file>
+    <file>Icons/barline_single.png</file>
+    <file>Icons/bend.png</file>
+    <file>Icons/coda.png</file>
+    <file>Icons/decreasetablineheight.gif</file>
+    <file>Icons/dotted_note.png</file>
+    <file>Icons/double_flat.png</file>
+    <file>Icons/double_sharp.png</file>
+    <file>Icons/doubledotted_note.png</file>
+    <file>Icons/dynamic_f.png</file>
+    <file>Icons/dynamic_ff.png</file>
+    <file>Icons/dynamic_fff.png</file>
+    <file>Icons/dynamic_mf.png</file>
+    <file>Icons/dynamic_mp.png</file>
+    <file>Icons/dynamic_p.png</file>
+    <file>Icons/dynamic_pp.png</file>
+    <file>Icons/dynamic_ppp.png</file>
+    <file>Icons/fermata.png</file>
+    <file>Icons/flat.png</file>
+    <file>Icons/ghost.png</file>
+    <file>Icons/grace.png</file>
+    <file>Icons/group_note_irregular.png</file>
+    <file>Icons/group_note.png</file>
+    <file>Icons/half_note_dotted.png</file>
+    <file>Icons/half_note.png</file>
+    <file>Icons/half_rest.png</file>
+    <file>Icons/harmonic_artificial.png</file>
+    <file>Icons/harmonic_natural.png</file>
+    <file>Icons/harmonic_tapped.png</file>
+    <file>Icons/increasetablineheight.gif</file>
+    <file>Icons/keysignature.png</file>
+    <file>Icons/lefthandfingering.png</file>
+    <file>Icons/legato.png</file>
+    <file>Icons/legatoslide.png</file>
+    <file>Icons/let_ring.png</file>
+    <file>Icons/add.png</file>
+    <file>Icons/arrow-154-64.png</file>
+    <file>Icons/arrow-216-64.png</file>
+    <file>Icons/Search icon.png</file>
+    <file>Icons/down-arrow.png</file>
+    <file>Icons/icons8-add-file-60.png</file>
+    <file>Icons/icons8-delete-file-60.png</file>
+    <file>Icons/logolight-1.png</file>
+    <file>Icons/menu.png</file>
+    <file>Icons/minus.png</file>
+    <file>Icons/settingssmall1.png</file>
+    <file>Icons/up-arrow.png</file>
+    <file>Icons/whitemenu.png</file>
     <file>Icons/arrow-154-64.png</file>
     <file>Icons/arrow-216-64.png</file>
     <file>Icons/up-arrow.png</file>
@@ -7,8 +75,8 @@
     <file>Icons/icons8-delete-file-60.png</file>
     <file>Icons/logolight-1.png</file>
     <file>Icons/menu.png</file>
-    <file>Icons/search.png</file>
     <file>Icons/settingssmall1.png</file>
     <file>Icons/whitemenu.png</file>
+    <file>Icons/search.png</file>
   </qresource>
 </RCC>
