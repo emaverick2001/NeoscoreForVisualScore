@@ -1,5 +1,7 @@
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtCore import QPointF
+from PyQt5.QtCore import QPointF, Qt, QEvent
+from PyQt5.QtGui import QWheelEvent
+from PyQt5.QtWidgets import QGestureEvent, QPinchGesture
 
 from neoscore.core.key_event import KeyEventType
 from neoscore.core.mouse_event import MouseEventType
@@ -34,16 +36,17 @@ class Viewport(QtWidgets.QGraphicsView):
         self.setViewportUpdateMode(_NO_VIEWPORT_UPDATE)  # noqa
         self.mouse_event_handler = None
         self.key_event_handler = None
+        self.setInteractive(True)
+        self.grabGesture(Qt.PinchGesture)
 
     def set_auto_interaction(self, enabled: bool):
         """Set whether mouse and scrollbar interaction is enabled."""
         self.auto_interaction_enabled = enabled
+        self.setDragMode(_NO_DRAG)
         if enabled:
-            self.setDragMode(_SCROLL_HAND_DRAG)  # noqa
             self.setHorizontalScrollBarPolicy(_SCROLL_BAR_AS_NEEDED)  # noqa
             self.setVerticalScrollBarPolicy(_SCROLL_BAR_AS_NEEDED)  # noqa
         else:
-            self.setDragMode(_NO_DRAG)  # noqa
             self.setHorizontalScrollBarPolicy(_SCROLL_BAR_ALWAYS_OFF)  # noqa
             self.setVerticalScrollBarPolicy(_SCROLL_BAR_ALWAYS_OFF)  # noqa
 
@@ -51,22 +54,68 @@ class Viewport(QtWidgets.QGraphicsView):
         """Implementation of Qt event hook for zooming with the mouse wheel."""
         if not self.auto_interaction_enabled:
             return
+        
+        modifiers = event.modifiers()
         zoom_in_factor = 0.9
         zoom_out_factor = 1 / zoom_in_factor
-        wheel_delta = event.angleDelta().y()
-        # Save the scene pos
-        old_pos = self.mapToScene(event.pos())
-        # Zoom
-        if wheel_delta > 0:
-            zoom_factor = zoom_in_factor
+
+        if modifiers == Qt.ControlModifier:
+            # Set zoom factors based on mouse wheel movement
+            wheel_delta = event.angleDelta().y()
+            if wheel_delta > 0:
+                zoom_factor = zoom_in_factor
+            else:
+                zoom_factor = zoom_out_factor
+            # Save the scene pos
+            old_pos = self.mapToScene(event.pos())
+            # Zoom
+            self.scale(zoom_factor, zoom_factor)
+            # Get the new pos
+            new_pos = self.mapToScene(event.pos())
+            # Move scene to old pos
+            delta = new_pos - old_pos
+            self.translate(delta.x(), delta.y())
         else:
-            zoom_factor = zoom_out_factor
-        self.scale(zoom_factor, zoom_factor)
-        # Get the new position
-        new_pos = self.mapToScene(event.pos())
-        # Move scene to old position
-        delta = new_pos - old_pos
-        self.translate(delta.x(), delta.y())
+            # Scroll horizontally and vertically
+            delta = event.angleDelta()
+            horizontal_steps = delta.x() / 120
+            vertical_steps = delta.y() / 120
+
+            # Scroll horizontally if horizontal delta is present
+            if horizontal_steps != 0:
+                horizontal_value = self.horizontalScrollBar().value() - int(horizontal_steps * self.horizontalScrollBar().singleStep())
+                self.horizontalScrollBar().setValue(horizontal_value)
+
+            # Scroll vertically if vertical delta is present
+            if vertical_steps != 0:
+                vertical_value = self.verticalScrollBar().value() - int(vertical_steps * self.verticalScrollBar().singleStep())
+                self.verticalScrollBar().setValue(vertical_value)
+
+        # Accept the event to indicate that it has been handled
+        event.accept()
+
+    def gestureEvent(self, event: QGestureEvent):
+        """Handle gestures for zooming using pinch gesture."""
+        if not self.auto_interaction_enabled:
+            return False
+        
+        if pinch := event.gesture(Qt.PinchGesture):
+            self.handlePinch(pinch)
+            event.accept()
+            return True
+        
+        return super().gestureEvent(event)
+    
+    def handlePinch(self, gesture: QPinchGesture):
+        """Handle pinch gesture for zooming."""
+        change_flags = gesture.changeFlags()
+        if change_flags & QPinchGesture.ScaleFactorChanged:
+            scale_factor = gesture.scaleFactor()
+            old_pos = self.mapToScene(gesture.centerPoint().toPoint())
+            self.scale(scale_factor, scale_factor)
+            new_pos = self.mapToScene(gesture.centerPoint().toPoint())
+            delta = new_pos - old_pos
+            self.translate(delta.x(), delta.y())
 
     def scrollContentsBy(self, *args):
         """Override of superclass scroll action to trigger a viewport update."""
@@ -129,5 +178,11 @@ class Viewport(QtWidgets.QGraphicsView):
             self.key_event_handler(q_key_event_to_key_event(e, KeyEventType.RELEASE))
         if self.auto_interaction_enabled:
             super().keyPressEvent(e)
+
+    def event(self, e):
+        """Override the event method to handle gesture events."""
+        if e.type() == QEvent.Gesture:
+            return self.gestureEvent(e)
+        return super().event(e)
 
     # End of input event handler overrides
