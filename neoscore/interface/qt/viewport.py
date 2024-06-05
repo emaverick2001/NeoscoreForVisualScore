@@ -76,7 +76,7 @@ class Viewport(QtWidgets.QGraphicsView):
             delta = new_pos - old_pos
             self.translate(delta.x(), delta.y())
         else:
-            # Scroll horizontally and vertically
+            # Get and set scroll values
             delta = event.angleDelta()
             horizontal_steps = delta.x() / 120
             vertical_steps = delta.y() / 120
@@ -95,7 +95,7 @@ class Viewport(QtWidgets.QGraphicsView):
         event.accept()
 
     def gestureEvent(self, event: QGestureEvent):
-        """Handle gestures for zooming using pinch gesture."""
+        """Get input from pinch gestures."""
         if not self.auto_interaction_enabled:
             return False
         
@@ -107,7 +107,7 @@ class Viewport(QtWidgets.QGraphicsView):
         return super().gestureEvent(event)
     
     def handlePinch(self, gesture: QPinchGesture):
-        """Handle pinch gesture for zooming."""
+        """Update viewport zoom from pinch gesture values."""
         change_flags = gesture.changeFlags()
         if change_flags & QPinchGesture.ScaleFactorChanged:
             scale_factor = gesture.scaleFactor()
@@ -180,7 +180,7 @@ class Viewport(QtWidgets.QGraphicsView):
             super().keyPressEvent(e)
 
     def event(self, e):
-        """Override the event method to handle gesture events."""
+        """Override the event method of QGestureEvent to handle pinch zoom functionality."""
         if e.type() == QEvent.Gesture:
             return self.gestureEvent(e)
         return super().event(e)
