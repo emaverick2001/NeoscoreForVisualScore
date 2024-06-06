@@ -18,6 +18,9 @@ _SCROLL_BAR_ALWAYS_OFF = 1
 _FOCUS_POLICY_STRONG_FOCUS = 0x1 | 0x2 | 0x8
 _FOCUS_POLICY_NO_FOCUS = 0
 
+MIN_ZOOM_VALUE = 0.5
+MAX_ZOOM_VALUE = 50
+
 
 class Viewport(QtWidgets.QGraphicsView):
     """A QGraphicsView configured for use in interactive neoscore scenes.
@@ -38,6 +41,7 @@ class Viewport(QtWidgets.QGraphicsView):
         self.key_event_handler = None
         self.setInteractive(True)
         self.grabGesture(Qt.PinchGesture)
+        self.zoom_level = 1.0
 
     def set_auto_interaction(self, enabled: bool):
         """Set whether mouse and scrollbar interaction is enabled."""
@@ -59,27 +63,34 @@ class Viewport(QtWidgets.QGraphicsView):
         zoom_in_factor = 0.9
         zoom_out_factor = 1 / zoom_in_factor
 
-        if modifiers == Qt.ControlModifier:
+        if modifiers == Qt.ControlModifier: # Mouse wheel zooms when Ctrl/Cmd is pressed
             # Set zoom factors based on mouse wheel movement
             wheel_delta = event.angleDelta().y()
             if wheel_delta > 0:
                 zoom_factor = zoom_in_factor
             else:
                 zoom_factor = zoom_out_factor
-            # Save the scene pos
-            old_pos = self.mapToScene(event.pos())
-            # Zoom
-            self.scale(zoom_factor, zoom_factor)
-            # Get the new pos
-            new_pos = self.mapToScene(event.pos())
-            # Move scene to old pos
-            delta = new_pos - old_pos
-            self.translate(delta.x(), delta.y())
-        else:
+            new_zoom_level = self.zoom_level * zoom_factor
+            if self.is_zoom_within_bounds(new_zoom_level):
+                self.zoom_level = new_zoom_level
+                # Save the scene pos
+                old_pos = self.mapToScene(event.pos())
+                # Zoom
+                self.scale(zoom_factor, zoom_factor)
+                # Get the new pos
+                new_pos = self.mapToScene(event.pos())
+                # Move scene to old pos
+                delta = new_pos - old_pos
+                self.translate(delta.x(), delta.y())
+        else: # Mousewheel scrolls otherwise
             # Get and set scroll values
             delta = event.angleDelta()
-            horizontal_steps = delta.x() / 120
-            vertical_steps = delta.y() / 120
+            if modifiers == Qt.ShiftModifier: # Mouse wheel + Shift = horizontal scrolling
+                horizontal_steps = delta.y() / 120
+                vertical_steps = 0
+            else: # Otherwise normal vertical scrolling behavior
+                horizontal_steps = delta.x() / 120
+                vertical_steps = delta.y() / 120
 
             # Scroll horizontally if horizontal delta is present
             if horizontal_steps != 0:
@@ -111,11 +122,18 @@ class Viewport(QtWidgets.QGraphicsView):
         change_flags = gesture.changeFlags()
         if change_flags & QPinchGesture.ScaleFactorChanged:
             scale_factor = gesture.scaleFactor()
-            old_pos = self.mapToScene(gesture.centerPoint().toPoint())
-            self.scale(scale_factor, scale_factor)
-            new_pos = self.mapToScene(gesture.centerPoint().toPoint())
-            delta = new_pos - old_pos
-            self.translate(delta.x(), delta.y())
+            new_zoom_level = self.zoom_level * scale_factor
+            if self.is_zoom_within_bounds(new_zoom_level):
+                self.zoom_level = new_zoom_level
+                old_pos = self.mapToScene(gesture.centerPoint().toPoint())
+                self.scale(scale_factor, scale_factor)
+                new_pos = self.mapToScene(gesture.centerPoint().toPoint())
+                delta = new_pos - old_pos
+                self.translate(delta.x(), delta.y())
+
+    def is_zoom_within_bounds(self, zoom_level: float) -> bool:
+        """Check if the zoom level is within the allowed bounds."""
+        return MIN_ZOOM_VALUE <= zoom_level <= MAX_ZOOM_VALUE
 
     def scrollContentsBy(self, *args):
         """Override of superclass scroll action to trigger a viewport update."""
