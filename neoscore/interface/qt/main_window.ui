@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1254</width>
-    <height>877</height>
+    <width>1232</width>
+    <height>849</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -26,8 +26,23 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
      <widget class="QWidget" name="header_widget" native="true">
       <property name="styleSheet">
        <string notr="true">QWidget{
@@ -35,7 +50,7 @@
 	background-color: rgb(63, 63, 63);
 }</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_11">
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
@@ -153,7 +168,7 @@
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_14">
       <property name="spacing">
        <number>0</number>
@@ -178,8 +193,8 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-40</y>
-           <width>264</width>
+           <y>-205</y>
+           <width>262</width>
            <height>930</height>
           </rect>
          </property>
@@ -200,7 +215,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="frame">
+           <widget class="QFrame" name="SearchBar">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -239,7 +254,7 @@
               <number>4</number>
              </property>
              <item>
-              <widget class="QLineEdit" name="lineEdit">
+              <widget class="QLineEdit" name="SearchEntry">
                <property name="font">
                 <font>
                  <family>.AppleSystemUIFont</family>
@@ -262,7 +277,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="logo_2">
+              <widget class="QLabel" name="Logo">
                <property name="maximumSize">
                 <size>
                  <width>20</width>
@@ -295,7 +310,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QFrame" name="Staff_2">
+             <widget class="QFrame" name="Staff">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -440,7 +455,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_2">
+                <widget class="QFrame" name="Staff_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -610,7 +625,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_3">
+             <widget class="QFrame" name="Staves">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -758,7 +773,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_3">
+                <widget class="QFrame" name="Staves_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -928,7 +943,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_4">
+             <widget class="QFrame" name="Barlines">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -1073,7 +1088,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_4">
+                <widget class="QFrame" name="Barlines_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -1243,7 +1258,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_5">
+             <widget class="QFrame" name="Repeats">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -1388,7 +1403,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_5">
+                <widget class="QFrame" name="Repeats_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -1558,7 +1573,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_6">
+             <widget class="QFrame" name="Clefs">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -1703,7 +1718,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_6">
+                <widget class="QFrame" name="Clefs_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -1873,7 +1888,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_7">
+             <widget class="QFrame" name="Time_Signatures">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -2018,7 +2033,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_7">
+                <widget class="QFrame" name="Time_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -2188,7 +2203,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_8">
+             <widget class="QFrame" name="Note_Heads">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -2333,7 +2348,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_8">
+                <widget class="QFrame" name="Note_Heads_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -2461,7 +2476,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_9">
+             <widget class="QFrame" name="Slash">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -2606,7 +2621,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_9">
+                <widget class="QFrame" name="Slash_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -2734,7 +2749,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_10">
+             <widget class="QFrame" name="Round">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -2879,7 +2894,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_10">
+                <widget class="QFrame" name="Round_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -3007,7 +3022,7 @@ border:none;
              </widget>
             </item>
             <item>
-             <widget class="QFrame" name="Staff_11">
+             <widget class="QFrame" name="Note_Clusters">
               <property name="minimumSize">
                <size>
                 <width>260</width>
@@ -3152,7 +3167,7 @@ border:none;
                 </widget>
                </item>
                <item>
-                <widget class="QFrame" name="staff_dropdown_11">
+                <widget class="QFrame" name="Note_Clusters_dropdown">
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
@@ -3344,7 +3359,7 @@ border:none;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1254</width>
+     <width>1232</width>
      <height>21</height>
     </rect>
    </property>
@@ -3479,165 +3494,166 @@ border:none;
  </customwidgets>
  <resources>
   <include location="../../../resources.qrc"/>
+  <include location="../../../resources.qrc"/>
  </resources>
  <connections>
   <connection>
    <sender>dropdown1_11</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_11</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Note_Clusters_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>1387</y>
+     <x>47</x>
+     <y>751</y>
     </hint>
     <hint type="destinationlabel">
-     <x>229</x>
-     <y>1458</y>
+     <x>233</x>
+     <y>805</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_3</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_3</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Staves_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>49</x>
-     <y>301</y>
+     <x>47</x>
+     <y>31</y>
     </hint>
     <hint type="destinationlabel">
-     <x>247</x>
-     <y>329</y>
+     <x>251</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_4</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_4</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Barlines_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>424</y>
+     <x>43</x>
+     <y>121</y>
     </hint>
     <hint type="destinationlabel">
-     <x>240</x>
-     <y>504</y>
+     <x>244</x>
+     <y>175</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_5</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_5</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Repeats_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>564</y>
+     <x>47</x>
+     <y>211</y>
     </hint>
     <hint type="destinationlabel">
-     <x>236</x>
-     <y>641</y>
+     <x>240</x>
+     <y>265</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_7</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_7</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Time_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>842</y>
+     <x>47</x>
+     <y>391</y>
     </hint>
     <hint type="destinationlabel">
-     <x>233</x>
-     <y>912</y>
+     <x>237</x>
+     <y>445</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_10</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_10</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Round_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>1245</y>
+     <x>43</x>
+     <y>661</y>
     </hint>
     <hint type="destinationlabel">
-     <x>233</x>
-     <y>1325</y>
+     <x>237</x>
+     <y>715</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_2</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_2</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Staff_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>49</x>
-     <y>165</y>
+     <x>47</x>
+     <y>-59</y>
     </hint>
     <hint type="destinationlabel">
-     <x>67</x>
-     <y>233</y>
+     <x>71</x>
+     <y>-5</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_6</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_6</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Clefs_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>57</x>
-     <y>702</y>
+     <x>47</x>
+     <y>301</y>
     </hint>
     <hint type="destinationlabel">
-     <x>225</x>
-     <y>777</y>
+     <x>229</x>
+     <y>355</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_8</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_8</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Note_Heads_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>34</x>
-     <y>973</y>
+     <x>40</x>
+     <y>481</y>
     </hint>
     <hint type="destinationlabel">
-     <x>230</x>
-     <y>1046</y>
+     <x>234</x>
+     <y>535</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>dropdown1_9</sender>
    <signal>toggled(bool)</signal>
-   <receiver>staff_dropdown_9</receiver>
-   <slot>setHidden(bool)</slot>
+   <receiver>Slash_dropdown</receiver>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>42</x>
-     <y>1107</y>
+     <x>47</x>
+     <y>571</y>
     </hint>
     <hint type="destinationlabel">
-     <x>233</x>
-     <y>1180</y>
+     <x>237</x>
+     <y>625</y>
     </hint>
    </hints>
   </connection>
@@ -3645,15 +3661,15 @@ border:none;
    <sender>menu_Button</sender>
    <signal>toggled(bool)</signal>
    <receiver>scrollArea</receiver>
-   <slot>setHidden(bool)</slot>
+   <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>60</y>
+     <x>18</x>
+     <y>53</y>
     </hint>
     <hint type="destinationlabel">
-     <x>24</x>
-     <y>105</y>
+     <x>265</x>
+     <y>101</y>
     </hint>
    </hints>
   </connection>

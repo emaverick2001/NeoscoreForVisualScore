@@ -1,4 +1,5 @@
 import os
+import resources
 from time import time
 from typing import Optional, Tuple
 
@@ -40,6 +41,25 @@ class MainWindow(QtWidgets.QMainWindow):
         self.addPageButton.clicked.connect(self.addPage)
         self.delPageButton.clicked.connect(self.removePage)
         
+    # Hide Widget Menu
+        self.scrollArea.setHidden(True)
+        
+    # Hide Dropdowns
+        self.Staff_dropdown.setHidden(True)
+        self.Staves_dropdown.setHidden(True)
+        self.Barlines_dropdown.setHidden(True)
+        self.Repeats_dropdown.setHidden(True)
+        self.Clefs.setHidden(True)
+        self.Time_dropdown.setHidden(True)
+        self.Note_Heads_dropdown.setHidden(True)
+        self.Slash_dropdown.setHidden(True)
+        self.Round_dropdown.setHidden(True)
+        self.Note_Clusters_dropdown.setHidden(True)
+        
+    # Create Cleff Object
+    # def createClef(self):
+    #     self.
+    
     
     def newFile(self):
         print("New file clicked")
