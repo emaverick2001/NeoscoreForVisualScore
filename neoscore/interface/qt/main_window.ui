@@ -193,9 +193,9 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-205</y>
+           <y>0</y>
            <width>262</width>
-           <height>930</height>
+           <height>990</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -325,7 +325,6 @@
               </property>
               <property name="styleSheet">
                <string notr="true">QPushButton{
-border:none;
 }</string>
               </property>
               <property name="frameShape">
@@ -429,7 +428,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_2">
+                   <widget class="QLabel" name="Staff_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -478,123 +477,13 @@ border:none;
                   <property name="spacing">
                    <number>0</number>
                   </property>
-                  <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_2">
-                    <property name="text">
-                     <string>8</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QPushButton" name="staffDividerArrowDownButton_2">
-                    <property name="text">
-                     <string>12</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="3">
-                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_2">
-                    <property name="text">
-                     <string>14</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
-                   <widget class="QPushButton" name="splitBarDividerButton_2">
-                    <property name="text">
-                     <string>11</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_2">
-                    <property name="text">
-                     <string>2</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="2">
-                   <widget class="QPushButton" name="bracketButton_2">
-                    <property name="text">
-                     <string>3</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="1" column="4">
                    <widget class="QPushButton" name="systemDividerExtraLongButton_2">
                     <property name="text">
                      <string>10</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="3">
-                   <widget class="QPushButton" name="bracketTopButton_2">
-                    <property name="text">
-                     <string>4</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="4">
-                   <widget class="QPushButton" name="bracketBottomButton_2">
-                    <property name="text">
-                     <string>5</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_2">
-                    <property name="text">
-                     <string>9</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_2">
-                    <property name="text">
-                     <string>6</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="2">
-                   <widget class="QPushButton" name="staffDividerArrowUpButton_2">
-                    <property name="text">
-                     <string>13</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -604,17 +493,127 @@ border:none;
                      <string>7</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QPushButton" name="braceButton_2">
+                   <widget class="QPushButton" name="staff1Line_Button">
                     <property name="text">
                      <string>1</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="reverseBraceButton_2">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QPushButton" name="staffDividerArrowDownButton_2">
+                    <property name="text">
+                     <string>12</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="3">
+                   <widget class="QPushButton" name="systemDividerLongButton_2">
+                    <property name="text">
+                     <string>9</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QPushButton" name="bracketTopButton_2">
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <widget class="QPushButton" name="bracketBottomButton_2">
+                    <property name="text">
+                     <string>5</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="reversedBracketTopButton_2">
+                    <property name="text">
+                     <string>6</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="systemDividerButton_2">
+                    <property name="text">
+                     <string>8</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QPushButton" name="staffDividerArrowUpButton_2">
+                    <property name="text">
+                     <string>13</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_2">
+                    <property name="text">
+                     <string>14</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QPushButton" name="splitBarDividerButton_2">
+                    <property name="text">
+                     <string>11</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="bracketButton_2">
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -640,7 +639,6 @@ border:none;
               </property>
               <property name="styleSheet">
                <string notr="true">QPushButton{
-border:none;
 }</string>
               </property>
               <property name="frameShape">
@@ -744,7 +742,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_3">
+                   <widget class="QLabel" name="Staves_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -802,7 +800,7 @@ border:none;
                      <string>1</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -812,7 +810,7 @@ border:none;
                      <string>2</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -822,7 +820,7 @@ border:none;
                      <string>3</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -832,7 +830,7 @@ border:none;
                      <string>4</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -842,7 +840,7 @@ border:none;
                      <string>5</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -852,7 +850,7 @@ border:none;
                      <string>6</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -862,7 +860,7 @@ border:none;
                      <string>7</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -872,7 +870,7 @@ border:none;
                      <string>8</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -882,7 +880,7 @@ border:none;
                      <string>9</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -892,7 +890,7 @@ border:none;
                      <string>10</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -902,7 +900,7 @@ border:none;
                      <string>11</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -912,7 +910,7 @@ border:none;
                      <string>12</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -922,7 +920,7 @@ border:none;
                      <string>13</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -932,7 +930,7 @@ border:none;
                      <string>14</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -1062,7 +1060,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_4">
+                   <widget class="QLabel" name="Barlines_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -1377,7 +1375,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_5">
+                   <widget class="QLabel" name="Repeats_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -1692,7 +1690,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_6">
+                   <widget class="QLabel" name="Clefs_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -1741,20 +1739,50 @@ border:none;
                   <property name="spacing">
                    <number>0</number>
                   </property>
-                  <item row="0" column="0">
-                   <widget class="QPushButton" name="braceButton_6">
+                  <item row="2" column="1">
+                   <widget class="QPushButton" name="staffDividerArrowDownButton_6">
                     <property name="text">
-                     <string>1</string>
+                     <string>12</string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_6">
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="reversedBracketBottomButton_6">
                     <property name="text">
-                     <string>2</string>
+                     <string>7</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="reversedBracketTopButton_6">
+                    <property name="text">
+                     <string>6</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="systemDividerButton_6">
+                    <property name="text">
+                     <string>8</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2">
+                   <widget class="QPushButton" name="staffDividerArrowUpButton_6">
+                    <property name="text">
+                     <string>13</string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1777,6 +1805,36 @@ border:none;
                      <string>4</string>
                     </property>
                     <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="gCleff_Button">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="reverseBraceButton_6">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="3">
+                   <widget class="QPushButton" name="systemDividerLongButton_6">
+                    <property name="text">
+                     <string>9</string>
+                    </property>
+                    <property name="checkable">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -1791,40 +1849,10 @@ border:none;
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_6">
+                  <item row="2" column="3">
+                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_6">
                     <property name="text">
-                     <string>6</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QPushButton" name="reversedBracketBottomButton_6">
-                    <property name="text">
-                     <string>7</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_6">
-                    <property name="text">
-                     <string>8</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_6">
-                    <property name="text">
-                     <string>9</string>
+                     <string>14</string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1845,36 +1873,6 @@ border:none;
                    <widget class="QPushButton" name="splitBarDividerButton_6">
                     <property name="text">
                      <string>11</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QPushButton" name="staffDividerArrowDownButton_6">
-                    <property name="text">
-                     <string>12</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="2">
-                   <widget class="QPushButton" name="staffDividerArrowUpButton_6">
-                    <property name="text">
-                     <string>13</string>
-                    </property>
-                    <property name="checkable">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="3">
-                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_6">
-                    <property name="text">
-                     <string>14</string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -2007,7 +2005,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_7">
+                   <widget class="QLabel" name="TimeSignatures_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -2322,7 +2320,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_8">
+                   <widget class="QLabel" name="Noteheads_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -2595,7 +2593,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_9">
+                   <widget class="QLabel" name="SNoteheads_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -2868,7 +2866,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_10">
+                   <widget class="QLabel" name="RSNoteheads">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>
@@ -3141,7 +3139,7 @@ border:none;
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="dropdown1_text_11">
+                   <widget class="QLabel" name="Noteclusters_Text">
                     <property name="maximumSize">
                      <size>
                       <width>1000</width>

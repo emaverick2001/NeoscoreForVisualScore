@@ -4,7 +4,6 @@ from time import time
 from typing import Optional, Tuple
 
 from PyQt5 import QtCore, QtWidgets, uic
-from PyQt5 import QtCore, QtWidgets, uic
 
 # cannot import setup/show again here, circular import
 # from neoscore.core.neoscore import setup, show
@@ -41,6 +40,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.addPageButton.clicked.connect(self.addPage)
         self.delPageButton.clicked.connect(self.removePage)
         
+        self.gCleff_Button.clicked.connect(self.createClef)
+        self.staff1Line_Button.clicked.connect(self.createStaff1Line)
+        
     # Hide Widget Menu
         self.scrollArea.setHidden(True)
         
@@ -55,11 +57,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.Slash_dropdown.setHidden(True)
         self.Round_dropdown.setHidden(True)
         self.Note_Clusters_dropdown.setHidden(True)
-        
-    # Create Cleff Object
-    # def createClef(self):
-    #     self.
-    
     
     def newFile(self):
         print("New file clicked")
@@ -114,6 +111,30 @@ class MainWindow(QtWidgets.QMainWindow):
             self.graphicsView.viewport().update()
         else:
             print("No pages to remove.")
+            
+    # Create Cleff Object
+    def createClef(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "gClef", font)
+        
+        # render the document again to update the view
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+    
+        # Update the view to show the new page
+        self.graphicsView.viewport().update()
+        
+    def createStaff1Line(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff1Line", font)
+        
+        # render the document again to update the view
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+    
+        # Update the view to show the new page
+        self.graphicsView.viewport().update()
+        
 
     def show(
         self,
