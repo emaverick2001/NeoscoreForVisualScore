@@ -48,7 +48,7 @@ class MainWindow(QtWidgets.QMainWindow):
         
     # Hide Dropdowns
         self.Staff_dropdown.setHidden(True)
-        self.Staves_dropdown.setHidden(True)
+        self.Stave_dropdown.setHidden(True)
         self.Barlines_dropdown.setHidden(True)
         self.Repeats_dropdown.setHidden(True)
         self.Clefs.setHidden(True)
