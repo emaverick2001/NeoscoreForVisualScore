@@ -1252,7 +1252,7 @@
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QPushButton" name="braceButton_4">
+                   <widget class="QPushButton" name="barlineSingle_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1267,7 +1267,7 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_4">
+                   <widget class="QPushButton" name="barlineDouble_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1282,7 +1282,7 @@
                    </widget>
                   </item>
                   <item row="0" column="2">
-                   <widget class="QPushButton" name="bracketButton_4">
+                   <widget class="QPushButton" name="barlineFinal_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1297,7 +1297,7 @@
                    </widget>
                   </item>
                   <item row="0" column="3">
-                   <widget class="QPushButton" name="bracketTopButton_4">
+                   <widget class="QPushButton" name="barlineReverseFinal_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1312,7 +1312,7 @@
                    </widget>
                   </item>
                   <item row="0" column="4">
-                   <widget class="QPushButton" name="bracketBottomButton_4">
+                   <widget class="QPushButton" name="barlineHeavy_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1327,7 +1327,7 @@
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_4">
+                   <widget class="QPushButton" name="barlineHeavyHeavy_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1342,7 +1342,7 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QPushButton" name="reversedBracketBottomButton_4">
+                   <widget class="QPushButton" name="barlineDashed_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1357,7 +1357,7 @@
                    </widget>
                   </item>
                   <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_4">
+                   <widget class="QPushButton" name="barlineDotted_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1372,7 +1372,7 @@
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_4">
+                   <widget class="QPushButton" name="barlineShort_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1387,7 +1387,7 @@
                    </widget>
                   </item>
                   <item row="1" column="4">
-                   <widget class="QPushButton" name="systemDividerExtraLongButton_4">
+                   <widget class="QPushButton" name="barlineTick_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1402,7 +1402,7 @@
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QPushButton" name="extra_button">
+                   <widget class="QPushButton" name="splitBarDividerButton_4">
                     <property name="text">
                      <string>11</string>
                     </property>
@@ -1782,7 +1782,7 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="coda_button">
+                  <widget class="QPushButton" name="coda_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -3763,7 +3763,6 @@ border:none;
  <resources>
   <include location="../../../resources.qrc"/>
   <include location="../../../resources.qrc"/>
-  <include location="../../../../../../resources.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -3774,11 +3773,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>751</y>
+     <y>1025</y>
     </hint>
     <hint type="destinationlabel">
-     <x>233</x>
-     <y>805</y>
+     <x>237</x>
+     <y>1079</y>
     </hint>
    </hints>
   </connection>
@@ -3790,11 +3789,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>31</y>
+     <y>229</y>
     </hint>
     <hint type="destinationlabel">
-     <x>251</x>
-     <y>85</y>
+     <x>255</x>
+     <y>315</y>
     </hint>
    </hints>
   </connection>
@@ -3805,12 +3804,12 @@ border:none;
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>121</y>
+     <x>47</x>
+     <y>371</y>
     </hint>
     <hint type="destinationlabel">
-     <x>244</x>
-     <y>175</y>
+     <x>248</x>
+     <y>449</y>
     </hint>
    </hints>
   </connection>
@@ -3822,11 +3821,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>211</y>
+     <y>485</y>
     </hint>
     <hint type="destinationlabel">
-     <x>240</x>
-     <y>265</y>
+     <x>244</x>
+     <y>539</y>
     </hint>
    </hints>
   </connection>
@@ -3838,11 +3837,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>391</y>
+     <y>665</y>
     </hint>
     <hint type="destinationlabel">
-     <x>237</x>
-     <y>445</y>
+     <x>241</x>
+     <y>719</y>
     </hint>
    </hints>
   </connection>
@@ -3853,12 +3852,12 @@ border:none;
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>661</y>
+     <x>47</x>
+     <y>935</y>
     </hint>
     <hint type="destinationlabel">
-     <x>237</x>
-     <y>715</y>
+     <x>241</x>
+     <y>989</y>
     </hint>
    </hints>
   </connection>
@@ -3870,11 +3869,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>-59</y>
+     <y>117</y>
     </hint>
     <hint type="destinationlabel">
-     <x>71</x>
-     <y>-5</y>
+     <x>75</x>
+     <y>149</y>
     </hint>
    </hints>
   </connection>
@@ -3886,11 +3885,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>301</y>
+     <y>575</y>
     </hint>
     <hint type="destinationlabel">
-     <x>229</x>
-     <y>355</y>
+     <x>233</x>
+     <y>629</y>
     </hint>
    </hints>
   </connection>
@@ -3901,12 +3900,12 @@ border:none;
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>40</x>
-     <y>481</y>
+     <x>46</x>
+     <y>755</y>
     </hint>
     <hint type="destinationlabel">
-     <x>234</x>
-     <y>535</y>
+     <x>238</x>
+     <y>809</y>
     </hint>
    </hints>
   </connection>
@@ -3918,11 +3917,11 @@ border:none;
    <hints>
     <hint type="sourcelabel">
      <x>47</x>
-     <y>571</y>
+     <y>845</y>
     </hint>
     <hint type="destinationlabel">
-     <x>237</x>
-     <y>625</y>
+     <x>241</x>
+     <y>899</y>
     </hint>
    </hints>
   </connection>
