@@ -42,6 +42,53 @@ class MainWindow(QtWidgets.QMainWindow):
         
         self.gCleff_Button.clicked.connect(self.createClef)
         self.staff1Line_Button.clicked.connect(self.createStaff1Line)
+
+        # staves 
+        self.staff1Line_Button.clicked.connect(self.createStaff1Line)
+        self.staff2Lines_button.clicked.connect(self.createStaff2Lines)
+        self.staff3Lines_button.clicked.connect(self.createStaff3Lines)
+        self.staff4Lines_button.clicked.connect(self.createStaff4Lines)
+        self.staff5Lines_button.clicked.connect(self.createStaff5Lines)
+        self.staff6Lines_button.clicked.connect(self.createStaff6Lines)
+        self.staff1LineWide_button.clicked.connect(self.createStaff1LineWide)
+        self.staff2LinesWide_button.clicked.connect(self.createStaff2LinesWide)
+        self.staff3LinesWide_button.clicked.connect(self.createStaff3LinesWide)
+        self.staff4LinesWide_button.clicked.connect(self.createStaff4LinesWide)
+        self.staff5LinesWide_button.clicked.connect(self.createStaff5LinesWide)
+        self.staff6LinesWide_button.clicked.connect(self.createStaff6LinesWide)
+        self.staff1LineNarrow_button.clicked.connect(self.createStaff1LineNarrow)
+        self.staff2LinesNarrow_button.clicked.connect(self.createStaff2LinesNarrow)
+
+        # barlines
+        self.barlineSingle_button.clicked.connect(self.createBarlineSingle)
+        self.barlineDouble_button.clicked.connect(self.createBarlineDouble)
+        self.barlineFinal_button.clicked.connect(self.createBarlineFinal)
+        self.barlineReverseFinal_button.clicked.connect(self.createBarlineReverseFinal)
+        self.barlineHeavy_button.clicked.connect(self.createBarlineHeavy)
+        self.barlineHeavyHeavy_button.clicked.connect(self.createBarlineHeavyHeavy)
+        self.barlineDashed_button.clicked.connect(self.createBarlineDashed)
+        self.barlineDotted_button.clicked.connect(self.createBarlineDotted)
+        self.barlineShort_button.clicked.connect(self.createBarlineShort)
+        self.barlineTick_button.clicked.connect(self.createBarlineTick)
+
+        # repeats
+        self.repeatLeft_button.clicked.connect(self.createRepeatLeft)
+        self.repeatRight_button.clicked.connect(self.createRepeatRight)
+        self.repeatRightLeft_button.clicked.connect(self.createRepeatRightLeft)
+        self.repeatDots_button.clicked.connect(self.createRepeatDots)
+        self.repeatDot_button.clicked.connect(self.createRepeatDot)
+        self.dalSegno_button.clicked.connect(self.createDalSegno)
+        self.daCapo_button.clicked.connect(self.createDaCapo)
+        self.segno_button.clicked.connect(self.createSegno)
+        self.coda_button.clicked.connect(self.createCoda)
+        self.codaSquare_button.clicked.connect(self.createCodaSquare)
+        self.segnoSerpent1_button.clicked.connect(self.createSegnoSerpent1)
+        self.segnoSerpent2_button.clicked.connect(self.createSegnoSerpent2)
+        self.leftRepeatSmall_button.clicked.connect(self.createLeftRepeatSmall)
+        self.rightRepeatSmall_button.clicked.connect(self.createRightRepeatSmall)
+
+
+
         
     # Hide Widget Menu
         self.scrollArea.setHidden(True)
@@ -111,31 +158,208 @@ class MainWindow(QtWidgets.QMainWindow):
             self.graphicsView.viewport().update()
         else:
             print("No pages to remove.")
-            
+    
+    def updatePage(self):
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+        self.graphicsView.viewport().update()
     # Create Cleff Object
+
     def createClef(self):
         font = MusicFont("Bravura", Unit(10))
         MusicText(ORIGIN, None, "gClef", font)
-        
-        # render the document again to update the view
-        neoscore.app_interface.clear_scene() 
-        neoscore.document.render(True, Brush("#FFFFFF"))
-    
-        # Update the view to show the new page
-        self.graphicsView.viewport().update()
+        self.updatePage()
         
     def createStaff1Line(self):
         font = MusicFont("Bravura", Unit(10))
         MusicText(ORIGIN, None, "staff1Line", font)
-        
-        # render the document again to update the view
-        neoscore.app_interface.clear_scene() 
-        neoscore.document.render(True, Brush("#FFFFFF"))
+        self.updatePage()
     
-        # Update the view to show the new page
-        self.graphicsView.viewport().update()
-        
+    def createStaff2Lines(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff2Lines", font)
+        self.updatePage()
+    
+    def createStaff3Lines(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff3Lines", font)
+        self.updatePage()
+    
+    def createStaff4Lines(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff4Lines", font)
+        self.updatePage()
+    
+    def createStaff5Lines(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff5Lines", font)
+        self.updatePage()
+    
+    def createStaff6Lines(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff6Lines", font)
+        self.updatePage()
+    
+    def createStaff1LineWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff1LineWide", font)
+        self.updatePage()
+    
+    def createStaff2LinesWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff2LinesWide", font)
+        self.updatePage()
+    
+    def createStaff3LinesWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff3LinesWide", font)
+        self.updatePage()
+    
+    def createStaff4LinesWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff4LinesWide", font)
+        self.updatePage()
+    
+    def createStaff5LinesWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff5LinesWide", font)
+        self.updatePage()
 
+    def createStaff6LinesWide(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff6LinesWide", font)
+        self.updatePage()
+
+    def createStaff1LineNarrow(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff1LineNarrow", font)
+        self.updatePage()
+    
+    def createStaff2LinesNarrow(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "staff2LinesNarrow", font)
+        self.updatePage()
+    
+    def createBarlineSingle(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineSingle", font)
+        self.updatePage()
+
+    def createBarlineDouble(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineDouble", font)
+        self.updatePage()
+    
+    def createBarlineFinal(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineFinal", font)
+        self.updatePage()
+    
+    def createBarlineReverseFinal(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineReverseFinal", font)
+        self.updatePage()
+    
+    def createBarlineHeavy(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineHeavy", font)
+        self.updatePage()
+
+    def createBarlineHeavyHeavy(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineHeavyHeavy", font)
+        self.updatePage()
+    
+    def createBarlineDashed(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineDashed", font)
+        self.updatePage()
+    
+    def createBarlineDotted(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineDotted", font)
+        self.updatePage()
+    
+    def createBarlineShort(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineShort", font)
+        self.updatePage()
+    
+    def createBarlineTick(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "barlineTick", font)
+        self.updatePage()
+    
+    def createRepeatLeft(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "repeatLeft", font)
+        self.updatePage()
+    
+    def createRepeatRight(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "repeatRight", font)
+        self.updatePage()
+    
+    def createRepeatRightLeft(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "repeatRightLeft", font)
+        self.updatePage()
+    
+    def createRepeatDots(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "repeatDots", font)
+        self.updatePage()
+    
+    def createRepeatDot(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "repeatDot", font)
+        self.updatePage()
+    
+    def createDalSegno(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "dalSegno", font)
+        self.updatePage()
+
+    def createDaCapo(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "daCapo", font)
+        self.updatePage()
+    
+    def createSegno(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "segno", font)
+        self.updatePage()
+    
+    def createCoda(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "coda", font)
+        self.updatePage()
+    
+    def createCodaSquare(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "codaSquare", font)
+        self.updatePage()
+    
+    def createSegnoSerpent1(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "segnoSerpent1", font)
+        self.updatePage()
+
+    def createSegnoSerpent2(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "segnoSerpent2", font)
+        self.updatePage()
+    
+    def createLeftRepeatSmall(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "leftRepeatSmall", font)
+        self.updatePage()
+    
+    def createRightRepeatSmall(self):
+        font = MusicFont("Bravura", Unit(10))
+        MusicText(ORIGIN, None, "rightRepeatSmall", font)
+        self.updatePage()
+    
     def show(
         self,
         min_size: Optional[Tuple[int, int]] = None,

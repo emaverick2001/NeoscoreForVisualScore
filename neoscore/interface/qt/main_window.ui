@@ -195,7 +195,7 @@
            <x>0</x>
            <y>0</y>
            <width>262</width>
-           <height>981</height>
+           <height>966</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -478,7 +478,7 @@
                    <number>0</number>
                   </property>
                   <item row="1" column="4">
-                   <widget class="QPushButton" name="systemDividerExtraLongButton_2">
+                   <widget class="QPushButton" name="staff4LinesWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -493,7 +493,7 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QPushButton" name="reversedBracketBottomButton_2">
+                   <widget class="QPushButton" name="staff1LineWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -523,7 +523,7 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_2">
+                   <widget class="QPushButton" name="staff2Lines_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -538,7 +538,7 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QPushButton" name="staffDividerArrowDownButton_2">
+                   <widget class="QPushButton" name="staff6LinesWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -553,7 +553,7 @@
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_2">
+                   <widget class="QPushButton" name="staff3LinesWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -568,7 +568,7 @@
                    </widget>
                   </item>
                   <item row="0" column="3">
-                   <widget class="QPushButton" name="bracketTopButton_2">
+                   <widget class="QPushButton" name="staff4Lines_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -583,7 +583,7 @@
                    </widget>
                   </item>
                   <item row="0" column="4">
-                   <widget class="QPushButton" name="bracketBottomButton_2">
+                   <widget class="QPushButton" name="staff5Lines_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -598,7 +598,7 @@
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_2">
+                   <widget class="QPushButton" name="staff6Lines_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -613,7 +613,7 @@
                    </widget>
                   </item>
                   <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_2">
+                   <widget class="QPushButton" name="staff2LinesWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -628,7 +628,7 @@
                    </widget>
                   </item>
                   <item row="2" column="2">
-                   <widget class="QPushButton" name="staffDividerArrowUpButton_2">
+                   <widget class="QPushButton" name="staff1LineNarrow_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -643,7 +643,7 @@
                    </widget>
                   </item>
                   <item row="2" column="3">
-                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_2">
+                   <widget class="QPushButton" name="staff2LinesNarrow_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -658,7 +658,7 @@
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QPushButton" name="splitBarDividerButton_2">
+                   <widget class="QPushButton" name="staff5LinesWide_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -673,7 +673,7 @@
                    </widget>
                   </item>
                   <item row="0" column="2">
-                   <widget class="QPushButton" name="bracketButton_2">
+                   <widget class="QPushButton" name="staff3Lines_button">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1190,9 +1190,14 @@ border:none;
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QPushButton" name="braceButton_4">
+                   <widget class="QPushButton" name="barlineSingle_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>1</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1200,9 +1205,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_4">
+                   <widget class="QPushButton" name="barlineDouble_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>2</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1210,9 +1220,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="2">
-                   <widget class="QPushButton" name="bracketButton_4">
+                   <widget class="QPushButton" name="barlineFinal_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>3</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1220,9 +1235,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="3">
-                   <widget class="QPushButton" name="bracketTopButton_4">
+                   <widget class="QPushButton" name="barlineReverseFinal_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>4</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1230,9 +1250,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="4">
-                   <widget class="QPushButton" name="bracketBottomButton_4">
+                   <widget class="QPushButton" name="barlineHeavy_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>5</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1240,9 +1265,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_4">
+                   <widget class="QPushButton" name="barlineHeavyHeavy_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>6</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1250,9 +1280,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QPushButton" name="reversedBracketBottomButton_4">
+                   <widget class="QPushButton" name="barlineDashed_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>7</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1260,9 +1295,15 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_4">
+                   <widget class="QPushButton" name="barlineDotted_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                      <pointsize>13</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>8</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1270,9 +1311,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_4">
+                   <widget class="QPushButton" name="barlineShort_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>9</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1280,9 +1326,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="4">
-                   <widget class="QPushButton" name="systemDividerExtraLongButton_4">
+                   <widget class="QPushButton" name="barlineTick_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>10</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1290,7 +1341,7 @@ border:none;
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QPushButton" name="splitBarDividerButton_4">
+                   <widget class="QPushButton" name="extra_button">
                     <property name="text">
                      <string>11</string>
                     </property>
@@ -1505,9 +1556,14 @@ border:none;
                    <number>0</number>
                   </property>
                   <item row="0" column="2">
-                   <widget class="QPushButton" name="bracketButton_5">
+                   <widget class="QPushButton" name="repeatRightLeft_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>3</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1515,9 +1571,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QPushButton" name="splitBarDividerButton_5">
+                   <widget class="QPushButton" name="segnoSerpent1_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>11</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1525,9 +1586,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QPushButton" name="reverseBraceButton_5">
+                   <widget class="QPushButton" name="repeatRight_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>2</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1535,9 +1601,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QPushButton" name="reversedBracketBottomButton_5">
+                   <widget class="QPushButton" name="daCapo_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>7</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1545,9 +1616,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="4">
-                   <widget class="QPushButton" name="systemDividerExtraLongButton_5">
+                   <widget class="QPushButton" name="codaSquare_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>10</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1555,9 +1631,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QPushButton" name="braceButton_5">
+                   <widget class="QPushButton" name="repeatLeft_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>1</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1565,9 +1646,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QPushButton" name="staffDividerArrowDownButton_5">
+                   <widget class="QPushButton" name="segnoSerpent2_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>12</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1575,9 +1661,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="2" column="2">
-                   <widget class="QPushButton" name="staffDividerArrowUpButton_5">
+                   <widget class="QPushButton" name="leftRepeatSmall_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>13</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1585,9 +1676,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QPushButton" name="reversedBracketTopButton_5">
+                   <widget class="QPushButton" name="dalSegno_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>6</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1595,9 +1691,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="4">
-                   <widget class="QPushButton" name="bracketBottomButton_5">
+                   <widget class="QPushButton" name="repeatDot_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>5</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1605,9 +1706,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="2" column="3">
-                   <widget class="QPushButton" name="staffDividerArrowUpDownButton_5">
+                   <widget class="QPushButton" name="rightRepeatSmall_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>14</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1615,9 +1721,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="systemDividerLongButton_5">
+                   <widget class="QPushButton" name="coda_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>9</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1625,9 +1736,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="0" column="3">
-                   <widget class="QPushButton" name="bracketTopButton_5">
+                   <widget class="QPushButton" name="repeatDots_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>4</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -1635,9 +1751,14 @@ border:none;
                    </widget>
                   </item>
                   <item row="1" column="2">
-                   <widget class="QPushButton" name="systemDividerButton_5">
+                   <widget class="QPushButton" name="segno_button">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>8</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>true</bool>
@@ -3576,6 +3697,7 @@ border:none;
  <resources>
   <include location="../../../resources.qrc"/>
   <include location="../../../resources.qrc"/>
+  <include location="../../../../../../resources.qrc"/>
  </resources>
  <connections>
   <connection>
