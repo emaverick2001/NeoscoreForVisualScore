@@ -195,7 +195,7 @@
            <x>0</x>
            <y>0</y>
            <width>262</width>
-           <height>966</height>
+           <height>999</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -657,6 +657,21 @@
                     </property>
                    </widget>
                   </item>
+                  <item row="2" column="4">
+                   <widget class="QPushButton" name="staff3LinesNarrowButton">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string></string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
                   <item row="2" column="0">
                    <widget class="QPushButton" name="staff5LinesWide_button">
                     <property name="font">
@@ -708,8 +723,7 @@
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton{
-}</string>
+               <string notr="true"/>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -896,8 +910,13 @@
                   </item>
                   <item row="0" column="2">
                    <widget class="QPushButton" name="bracketButton">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>3</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -906,8 +925,13 @@
                   </item>
                   <item row="0" column="3">
                    <widget class="QPushButton" name="bracketTopButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>4</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -916,8 +940,13 @@
                   </item>
                   <item row="0" column="4">
                    <widget class="QPushButton" name="bracketBottomButton">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>5</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -926,8 +955,13 @@
                   </item>
                   <item row="1" column="0">
                    <widget class="QPushButton" name="reversedBracketTopButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>6</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -936,8 +970,13 @@
                   </item>
                   <item row="1" column="1">
                    <widget class="QPushButton" name="reversedBracketBottomButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>7</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -946,8 +985,13 @@
                   </item>
                   <item row="1" column="2">
                    <widget class="QPushButton" name="systemDividerButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>8</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -956,8 +1000,13 @@
                   </item>
                   <item row="1" column="3">
                    <widget class="QPushButton" name="systemDividerLongButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>9</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -966,8 +1015,13 @@
                   </item>
                   <item row="1" column="4">
                    <widget class="QPushButton" name="systemDividerExtraLongButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>10</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -976,8 +1030,13 @@
                   </item>
                   <item row="2" column="0">
                    <widget class="QPushButton" name="splitBarDividerButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>11</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -986,8 +1045,13 @@
                   </item>
                   <item row="2" column="1">
                    <widget class="QPushButton" name="staffDividerArrowDownButton_3">
+                    <property name="font">
+                     <font>
+                      <family>Bravura Text</family>
+                     </font>
+                    </property>
                     <property name="text">
-                     <string>12</string>
+                     <string></string>
                     </property>
                     <property name="checkable">
                      <bool>false</bool>
@@ -1035,9 +1099,7 @@
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-}</string>
+               <string notr="true"/>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -1190,7 +1252,7 @@ border:none;
                    <number>0</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QPushButton" name="barlineSingle_button">
+                   <widget class="QPushButton" name="braceButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1200,12 +1262,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QPushButton" name="barlineDouble_button">
+                   <widget class="QPushButton" name="reverseBraceButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1215,12 +1277,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="2">
-                   <widget class="QPushButton" name="barlineFinal_button">
+                   <widget class="QPushButton" name="bracketButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1230,12 +1292,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="3">
-                   <widget class="QPushButton" name="barlineReverseFinal_button">
+                   <widget class="QPushButton" name="bracketTopButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1245,12 +1307,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="4">
-                   <widget class="QPushButton" name="barlineHeavy_button">
+                   <widget class="QPushButton" name="bracketBottomButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1260,12 +1322,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QPushButton" name="barlineHeavyHeavy_button">
+                   <widget class="QPushButton" name="reversedBracketTopButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1275,12 +1337,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QPushButton" name="barlineDashed_button">
+                   <widget class="QPushButton" name="reversedBracketBottomButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1290,28 +1352,27 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="2">
-                   <widget class="QPushButton" name="barlineDotted_button">
+                   <widget class="QPushButton" name="systemDividerButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
-                      <pointsize>13</pointsize>
                      </font>
                     </property>
                     <property name="text">
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="3">
-                   <widget class="QPushButton" name="barlineShort_button">
+                   <widget class="QPushButton" name="systemDividerLongButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1321,12 +1382,12 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="4">
-                   <widget class="QPushButton" name="barlineTick_button">
+                   <widget class="QPushButton" name="systemDividerExtraLongButton_4">
                     <property name="font">
                      <font>
                       <family>Bravura Text</family>
@@ -1336,7 +1397,7 @@ border:none;
                      <string></string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -1346,7 +1407,7 @@ border:none;
                      <string>11</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -1356,7 +1417,7 @@ border:none;
                      <string>12</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -1376,7 +1437,7 @@ border:none;
                      <string>14</string>
                     </property>
                     <property name="checkable">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -3531,6 +3592,11 @@ border:none;
           <width>0</width>
           <height>0</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bravura Text</family>
+         </font>
         </property>
         <property name="mouseTracking">
          <bool>false</bool>
