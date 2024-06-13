@@ -28,7 +28,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.refresh_func = None
         self.mouse_event_handler = None
         self._frame = 0  # Frame counter used in debug mode
-        
+                
         self.actionNew.triggered.connect(self.newFile)
         self.actionOpen.triggered.connect(self.openFile)
         self.actionSave.triggered.connect(self.saveFile)
@@ -125,6 +125,11 @@ class MainWindow(QtWidgets.QMainWindow):
         
     def pasteFile(self):
         print("Paste file clicked")
+        
+    def updatePage(self):
+        neoscore.app_interface.clear_scene() 
+        neoscore.document.render(True, Brush("#FFFFFF"))
+        self.graphicsView.viewport().update()
 
     def addPage(self):
         new_page_index = len(neoscore.document.pages)
@@ -135,11 +140,7 @@ class MainWindow(QtWidgets.QMainWindow):
         
 
         # render the document again to show the new page
-        neoscore.app_interface.clear_scene() 
-        neoscore.document.render(True, Brush("#FFFFFF"))
-    
-        # Update the view to show the new page
-        self.graphicsView.viewport().update()
+        self.updatePage()
     
     #TODO needs to remove deleted page from being rendered on graphicsView
     
@@ -150,19 +151,12 @@ class MainWindow(QtWidgets.QMainWindow):
             print(last_page_index)
             neoscore.document.pages.pop(last_page_index)
 
-            # render the document again to reflect the removed page
-            neoscore.app_interface.clear_scene() 
-            neoscore.document.render(True, Brush("#FFFFFF"))
-        
-            # Update the view to reflect the removed page
-            self.graphicsView.viewport().update()
         else:
             print("No pages to remove.")
+            
+        # render the document again to reflect the removed page
+        self.updatePage()
     
-    def updatePage(self):
-        neoscore.app_interface.clear_scene() 
-        neoscore.document.render(True, Brush("#FFFFFF"))
-        self.graphicsView.viewport().update()
     # Create Cleff Object
 
     def createClef(self):

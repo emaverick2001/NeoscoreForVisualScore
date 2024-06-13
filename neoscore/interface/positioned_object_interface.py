@@ -82,4 +82,7 @@ class PositionedObjectInterface:
             obj.setParentItem(parent_obj)
         else:
             neoscore.app_interface.scene.addItem(obj)
+        obj.setFlag(QGraphicsItem.ItemIsMovable, True)
+        obj.setFlag(QGraphicsItem.ItemIsSelectable, True)
+        obj.setFlag(QGraphicsItem.ItemSendsGeometryChanges, True)
         super().__setattr__("_qt_object", obj)
