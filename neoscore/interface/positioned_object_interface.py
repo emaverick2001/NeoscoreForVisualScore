@@ -85,4 +85,5 @@ class PositionedObjectInterface:
         obj.setFlag(QGraphicsItem.ItemIsMovable, True)
         obj.setFlag(QGraphicsItem.ItemIsSelectable, True)
         obj.setFlag(QGraphicsItem.ItemSendsGeometryChanges, True)
+        obj.setFlag(QGraphicsItem.ItemIsFocusable, True)
         super().__setattr__("_qt_object", obj)

@@ -154,6 +154,8 @@ class Viewport(QtWidgets.QGraphicsView):
             )
         if self.auto_interaction_enabled:
             super().mouseMoveEvent(e)
+        # Explicitly update the viewport
+        self.viewport().update()
 
     def mousePressEvent(self, e):
         if self.mouse_event_handler:
