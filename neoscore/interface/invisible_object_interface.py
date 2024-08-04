@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 
 from PyQt5.QtWidgets import QGraphicsSimpleTextItem
+from neoscore.interface.ResizableGraphicsItem import ResizableGraphicsItem
 
 from neoscore.core.point import ORIGIN
 from neoscore.interface.positioned_object_interface import PositionedObjectInterface
@@ -11,6 +12,7 @@ from neoscore.interface.qt.converters import point_to_qt_point_f
 class InvisibleObjectInterface(PositionedObjectInterface):
     """A stub interface for use as a virtual parent in scenes."""
 
+    # TODO work on fixing the ResizableGraphicsItem subclass
     def render(self):
         qt_object = QGraphicsSimpleTextItem()
         qt_object.setPos(point_to_qt_point_f(self.pos))
@@ -26,4 +28,5 @@ class InvisibleObjectInterface(PositionedObjectInterface):
             qt_object.setTransformOriginPoint(
                 point_to_qt_point_f(self.transform_origin)
             )
+            
         self._register_qt_object(qt_object)

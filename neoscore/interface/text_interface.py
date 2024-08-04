@@ -78,7 +78,7 @@ class TextInterface(PositionedObjectInterface):
         qt_object.setPos(point_to_qt_point_f(self.pos))
         qt_object.setBrush(self.brush.qt_object)
         qt_object.setPen(self.pen.qt_object)
-        qt_object.update_geometry()
+        qt_object.update_geometry() 
         return qt_object
 
     def _get_path(self, text: str, font: FontInterface, scale: float) -> QClippingPath:

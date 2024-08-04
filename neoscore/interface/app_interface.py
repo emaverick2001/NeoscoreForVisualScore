@@ -69,13 +69,8 @@ class AppInterface:
         self.main_window = MainWindow()
         self.scene = QGraphicsScene()
         
-        # blackPen = QtGui.QPen(QtCore.Qt.black)
-        # greenBrush = QtGui.QBrush(QtCore.Qt.green)
-        # ellipse = self.scene.addEllipse(0, 0, 100, 100, blackPen, greenBrush)
-        # ellipse.setFlag(QGraphicsItem.ItemIsMovable)
-        
         self.view: Viewport = self.main_window.graphicsView
-        self.view.setScene(self.scene)
+        self.view.setScene(self.scene) #TODO check this for rendering
         self.background_brush = background_brush
         self.auto_viewport_interaction_enabled = auto_viewport_interaction_enabled
         self.font_database = QFontDatabase()

@@ -467,8 +467,8 @@ class PositionedObject:
                 self.rotation,
                 self.transform_origin,
             )
-            self._interface_for_children.render()
-            self.render_complete(self.pos)
+            self._interface_for_children.render() # look at thos line
+            self.render_complete(self.pos) # look at this line
         for child in self.children:
             child.render()
 
@@ -616,7 +616,7 @@ class PositionedObject:
 
         This and other render methods should generally not be called directly.
 
-        Args:
+        Args:a
             pos: The rendering position in document space for drawing.
             flowable_line: The line in which this object appears
             object_x: The local object x position of the line's start.

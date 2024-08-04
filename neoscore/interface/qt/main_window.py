@@ -129,7 +129,8 @@ class MainWindow(QtWidgets.QMainWindow):
     def updatePage(self):
         neoscore.app_interface.clear_scene() 
         neoscore.document.render(True, Brush("#FFFFFF"))
-        self.graphicsView.viewport().update()
+        # self.graphicsView.viewport().update()
+        self.refresh()
 
     def addPage(self):
         new_page_index = len(neoscore.document.pages)
@@ -166,7 +167,9 @@ class MainWindow(QtWidgets.QMainWindow):
         
     def createStaff1Line(self):
         font = MusicFont("Bravura", Unit(10))
-        MusicText(ORIGIN, None, "staff1Line", font)
+        staffLineObject = MusicText(ORIGIN, None, "staff1Line", font)
+        # staffLineObject.rotation = 90
+        # staffLineObject.scale = 2
         self.updatePage()
     
     def createStaff2Lines(self):

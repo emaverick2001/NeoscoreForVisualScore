@@ -4,12 +4,11 @@ from dataclasses import dataclass, field
 from typing import Optional
 from warnings import warn
 
-from PyQt5.QtWidgets import QGraphicsItem
-
+from PyQt5.QtWidgets import QGraphicsSimpleTextItem
 from neoscore.core import neoscore
 from neoscore.core.point import Point
 
-
+# this makes the class abstract
 @dataclass(frozen=True)
 class PositionedObjectInterface:
     """Interface for a generic graphic object.
@@ -50,7 +49,7 @@ class PositionedObjectInterface:
     transform_origin: Point
     """The origin point for rotation and scaling transforms"""
 
-    _qt_object: Optional[QGraphicsItem] = field(init=False, compare=False, repr=False)
+    _qt_object: Optional[QGraphicsSimpleTextItem] = field(init=False, compare=False, repr=False)
     """A corresponding Qt object for internal use only.
 
     This value is set during rendering and is not meant to be set more than once.
@@ -59,13 +58,13 @@ class PositionedObjectInterface:
     def render(self):
         """Render the object to the scene.
 
-        This is typically done by constructing a `QGraphicsItem` subclass and calling
+        This is typically done by constructing a `QGraphicsSimpleTextItem` subclass and calling
         `_register_qt_object` with it. Do *not* manually assign the Qt object's parent
         or add it to the Qt scene.
         """
         raise NotImplementedError
 
-    def _parent_qt_obj(self) -> Optional[QGraphicsItem]:
+    def _parent_qt_obj(self) -> Optional[QGraphicsSimpleTextItem]:
         if self.parent:
             parent_qt_obj = getattr(self.parent, "_qt_object", None)
             if not parent_qt_obj:
@@ -76,14 +75,15 @@ class PositionedObjectInterface:
             return parent_qt_obj
         return None
 
-    def _register_qt_object(self, obj: QGraphicsItem):
+    def _register_qt_object(self, obj: QGraphicsSimpleTextItem):
         parent_obj = self._parent_qt_obj()
+        obj.setFlag(QGraphicsSimpleTextItem.ItemIsMovable, True)
+        obj.setFlag(QGraphicsSimpleTextItem.ItemIsSelectable, True)
+        obj.setFlag(QGraphicsSimpleTextItem.ItemSendsGeometryChanges, True)
+        # obj.setFlag(QGraphicsSimpleTextItem.ItemIsFocusable, True)
         if parent_obj:
             obj.setParentItem(parent_obj)
         else:
-            neoscore.app_interface.scene.addItem(obj)
-        obj.setFlag(QGraphicsItem.ItemIsMovable, True)
-        obj.setFlag(QGraphicsItem.ItemIsSelectable, True)
-        obj.setFlag(QGraphicsItem.ItemSendsGeometryChanges, True)
-        obj.setFlag(QGraphicsItem.ItemIsFocusable, True)
+            neoscore.app_interface.scene.addItem(obj) # TODO look more closely at this line
+        
         super().__setattr__("_qt_object", obj)
